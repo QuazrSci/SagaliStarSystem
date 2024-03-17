@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.16 public/models/Anciana system_comet.glb -t
 
 import * as THREE from 'three'
 // import React, { useRef } from 'react'
-import { Html, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
@@ -25,9 +25,7 @@ export function Comet(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Comet.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.comet.geometry} material={materials.Comet} position={[-14.713, 8.33, -3.148]} scale={0.142} >
-        <Html><div className='planet_name'>OMA-2-504</div></Html>
-      </mesh>
+      <mesh geometry={nodes.comet.geometry} material={materials.Comet} position={[-14.713, 8.33, -3.148]} scale={0.142} />
       <mesh geometry={nodes.comet_trail.geometry} material={materials.Comet_trail} position={[-14.861, 8.428, -3.069]} rotation={[0.438, 0.263, 0.923]} scale={0.142} />
     </group>
   )

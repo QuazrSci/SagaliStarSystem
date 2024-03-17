@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.16 public/models/Anciana system_planets.glb -t
 
 import * as THREE from 'three'
 // import React, { useRef } from 'react'
-import { Html, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { useNavigate } from 'react-router-dom'
 
@@ -42,34 +42,20 @@ export function Planets(props: JSX.IntrinsicElements['group']) {
   const navigate = useNavigate();
   return (
     <group {...props} dispose={null}>
-      <mesh onClick={() => navigate('/objects/1', { replace: true })} geometry={nodes.gas_giant_1.geometry} material={materials['gas Giant 2']} position={[2.32, 0, -4.871]} rotation={[-0.167, 0.085, 0.434]} scale={0.784}>
-        <Html><div className='planet_name'>HOK-542-R</div></Html>
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/1', { replace: true })} geometry={nodes.gas_giant_1.geometry} material={materials['gas Giant 2']} position={[2.32, 0, -4.871]} rotation={[-0.167, 0.085, 0.434]} scale={0.784} >
         <mesh geometry={nodes.gas_giant_1_ring.geometry} material={materials.ring} position={[-0.017, 0, -0.013]} scale={1.524} />
       </mesh>
       <mesh geometry={nodes.moon_1.geometry} material={materials.dwarf_planet} position={[2.747, 0.435, -3.491]} rotation={[0.001, -0.031, 0.722]} scale={0.182} />
-      <mesh onClick={() => navigate('/objects/2', { replace: true })} geometry={nodes.gas_giant_2.geometry} material={materials['gas Giant 1']} position={[-10.127, 2.915, -4.602]} scale={0.808}>
-        <Html><div className='planet_name'>HOK-542-R</div></Html>
-      </mesh>
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/2', { replace: true })} geometry={nodes.gas_giant_2.geometry} material={materials['gas Giant 1']} position={[-10.127, 2.915, -4.602]} scale={0.808} />
       <mesh geometry={nodes.moon_2.geometry} material={materials.dwarf_planet} position={[-9.807, 3.003, -3.343]} rotation={[0.106, -0.175, 0.302]} scale={0.161} />
       <mesh geometry={nodes.moon_3.geometry} material={materials.dwarf_planet} position={[-10.482, 2.93, -5.953]} rotation={[0.106, -0.175, 0.302]} scale={0.092} />
-      <mesh onClick={() => navigate('/objects/3', { replace: true })} geometry={nodes.planet_1.geometry} material={materials.Planet2} position={[-3.589, 0.724, 0.091]} scale={0.314} >
-        <Html><div className='planet_name'>HIQ-225</div></Html>
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/3', { replace: true })} geometry={nodes.planet_1.geometry} material={materials.Planet2} position={[-3.589, 0.724, 0.091]} scale={0.314} />
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/4', { replace: true })} geometry={nodes.planet_2.geometry} material={materials.Planet2} position={[3.474, 0, 0.83]} scale={0.459} />
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/5', { replace: true })} geometry={nodes.planet_3.geometry} material={materials.Planet3} position={[-4.396, 0, -7.409]} scale={0.447} />
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/6', { replace: true })} geometry={nodes.planet_4.geometry} material={materials.Planet3} position={[-4.28, 0.162, 16.664]} rotation={[0.034, -0.682, -0.451]} scale={0.628} >
+        <mesh geometry={nodes.planet_4_ring.geometry} material={materials.ring} position={[-0.018, -0.022, 0.015]} scale={1.27} />
       </mesh>
-      <mesh onClick={() => navigate('/objects/4', { replace: true })} geometry={nodes.planet_2.geometry} material={materials.Planet2} position={[3.474, 0, 0.83]} scale={0.459} >
-        <Html><div className='planet_name'>HIQ-402</div></Html>
-      </mesh>
-      <mesh onClick={() => navigate('/objects/5', { replace: true })} geometry={nodes.planet_3.geometry} material={materials.Planet3} position={[-4.396, 0, -7.409]} scale={0.447} >
-        <Html><div className='planet_name'>HIQ-223</div></Html>
-      </mesh>
-      <mesh onClick={() => navigate('/objects/6', { replace: true })} geometry={nodes.planet_4.geometry} material={materials.Planet3} position={[-4.28, 0.162, 16.664]} rotation={[0.034, -0.682, -0.451]} scale={0.628}>
-        <Html><div className='planet_name'>HIO-204</div></Html>  
-        <mesh geometry={nodes.planet_4_ring.geometry} material={materials.ring} position={[-0.018, -0.022, 0.015]} scale={1.27} >
-          <Html><div className='planet_name'>HIQ-220</div></Html>
-        </mesh>
-      </mesh>
-      <mesh onClick={() => navigate('/objects/7', { replace: true })} geometry={nodes.star.geometry} material={materials.Star} scale={1.402}>
-        <Html><div className='planet_name'>Sagitarious</div></Html>
-      </mesh>
+      <mesh onClick={() => navigate('/SagaliStarSystem/objects/7', { replace: true })} geometry={nodes.star.geometry} material={materials.Star} scale={1.402} />
     </group>
   )
 }

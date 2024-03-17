@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.16 public/models/Anciana system_asteroids.glb -t
 
 import * as THREE from 'three'
 // import React, { useRef } from 'react'
-import { Html, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
@@ -24,12 +24,8 @@ export function Asteroids(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Asteroids.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.asteroid_belt.geometry} material={materials.Asteroid} position={[6.558, -0.686, 3.572]} >
-        <Html><div className='planet_name'>AR-204-p</div></Html>
-      </mesh>
-      <mesh geometry={nodes.asteroid_belt2.geometry} material={materials.Asteroid} position={[13.233, 0.989, 8.214]} >
-        <Html><div className='planet_name'>AR-221-p</div></Html>
-      </mesh>
+      <mesh geometry={nodes.asteroid_belt.geometry} material={materials.Asteroid} position={[6.558, -0.686, 3.572]} />
+      <mesh geometry={nodes.asteroid_belt2.geometry} material={materials.Asteroid} position={[13.233, 0.989, 8.214]} />
     </group>
   )
 }

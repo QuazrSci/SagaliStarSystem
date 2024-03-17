@@ -34,7 +34,7 @@ html,body {
 
 .visual-button {
   @apply border border-orange-500 rounded-md cursor-pointer
-  w-5 h-5
+  w-5 h-5 m-1.5
 }
 
 .about_button {
@@ -46,4 +46,9 @@ html,body {
 .back_button {
   @apply absolute text-white text-xl
   bottom-5 left-5 bg-gray-700 p-2 m-2 w-[18vw]
+}
+
+.object_button {
+  @apply border border-orange-600 p-2 m-1 text-white rounded-md text-lg
+  hover:bg-orange-300 hover:bg-opacity-35
 }
