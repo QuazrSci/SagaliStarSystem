@@ -2,7 +2,7 @@ import { Environment, useEnvironment} from "@react-three/drei"
 import { Bloom, DepthOfField, EffectComposer } from "@react-three/postprocessing";
 
 function PostEffects() {
-    const envMap = useEnvironment({ files: "/textures/HDR_blue_nebulae-1_4k.hdr"})
+    const envMap = useEnvironment({ files: "/SagaliStarSystem/textures/HDR_blue_nebulae-1_4k.hdr"})
     return (
         <>
             <Environment map={envMap} background/>

@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 // type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Comet(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/Comet.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Comet.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.comet.geometry} material={materials.Comet} position={[-14.713, 8.33, -3.148]} scale={0.142} >
@@ -33,4 +33,4 @@ export function Comet(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/Comet.glb')
+useGLTF.preload('/SagaliStarSystem/models/Comet.glb')

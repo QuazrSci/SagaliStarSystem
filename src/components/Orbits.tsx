@@ -28,7 +28,7 @@ type GLTFResult = GLTF & {
 // type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Orbits(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/Orbits.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Orbits.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.comet_orbit.geometry} material={materials.orbit_dashed} position={[-8.28, 4.051, 0.141]} rotation={[0.18, 0.236, -0.598]} scale={[0.159, 0.2, 0.2]} />
@@ -43,4 +43,4 @@ export function Orbits(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/Orbits.glb')
+useGLTF.preload('/SagaliStarSystem/models/Orbits.glb')

@@ -38,7 +38,7 @@ type GLTFResult = GLTF & {
 // type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Planets(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/Planets.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Planets.glb') as GLTFResult
   const navigate = useNavigate();
   return (
     <group {...props} dispose={null}>
@@ -74,4 +74,4 @@ export function Planets(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/Planets.glb')
+useGLTF.preload('/SagaliStarSystem/models/Planets.glb')

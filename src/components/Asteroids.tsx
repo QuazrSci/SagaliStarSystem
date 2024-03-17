@@ -21,7 +21,7 @@ type GLTFResult = GLTF & {
 // type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
 
 export function Asteroids(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/models/Asteroids.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/SagaliStarSystem/models/Asteroids.glb') as GLTFResult
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.asteroid_belt.geometry} material={materials.Asteroid} position={[6.558, -0.686, 3.572]} >
@@ -34,4 +34,4 @@ export function Asteroids(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload('/models/Asteroids.glb')
+useGLTF.preload('/SagaliStarSystem/models/Asteroids.glb')

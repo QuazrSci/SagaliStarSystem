@@ -1,7 +1,7 @@
 {
   "homepage": "https://quazrsci.github.io/SagaliStarSystem",
   "name": "starsystem",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
